@@ -1,2 +1,0 @@
-# transistor_calculator
- 
