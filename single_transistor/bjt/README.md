@@ -17,14 +17,13 @@
 - High current gain: can drive large loads without significant power loss
 - Phase shift of zero degrees between input and output signals: output is in phase with the input signal
 - Not as widely used as other amplifier configurations, but can be useful in certain applications where a low voltage gain and high current gain are desired
+- Often used as a buffer amplifier to isolate one circuit from another or to match the impedance of one circuit to another
 
 ### Common Collector Amplifier
 - Also known as an emitter follower
 - Uses a bipolar junction transistor (BJT) in a common collector configuration
 - Input signal is applied to the base terminal, amplified output is taken from the emitter terminal
 - Collector terminal provides a return path for current flowing through the transistor
-- Low voltage gain: not very good at amplifying small input signals to a larger output level
-- High current gain: can drive large loads without significant power loss
-- Phase shift of zero degrees between input and output signals: output is in phase with the input signal
-- Not as widely used as other amplifier configurations, but can be useful in certain applications where a low voltage gain and high current gain are desired
-- Often used as a buffer amplifier to isolate one circuit from another or to match the impedance of one circuit to another
+- High voltage gain: often used as voltage amplifier
+- Low current gain: cannot drive large loads without significant power loss
+
