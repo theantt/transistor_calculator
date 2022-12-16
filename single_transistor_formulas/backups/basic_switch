@@ -1,0 +1,58 @@
+class MyClass:
+    @staticmethod
+    def switch(value):
+        switch = {
+            True: {
+                "var1": "apple",
+                "var2": "orange",
+            },
+            False: {
+                "var1": "pear",
+                "var2": "banana",
+            }
+        }
+        return switch.get(value, {})
+
+    def __init__(self, value):
+        self.__dict__.update(self.switch(value))
+
+my_class1 = MyClass(True)
+print(my_class1.var1)
+print(my_class1.var2)
+
+my_class2 = MyClass(False)
+print(my_class2.var1)
+print(my_class2.var2)
+
+
+
+numbers instead of variables
+
+
+
+class MyClass:
+    @staticmethod
+    def switch(value):
+        switch = {
+            True: {
+                "var1": 1,
+                "var2": 2,
+            },
+            False: {
+                "var1": 3,
+                "var2": 4,
+            }
+        }
+        return switch.get(value, {})
+
+    def __init__(self, value):
+        self.__dict__.update(self.switch(value))
+
+my_class1 = MyClass(True)
+print(my_class1.var1)
+print(my_class1.var2)
+
+my_class2 = MyClass(False)
+print(my_class2.var1)
+print(my_class2.var2)
+

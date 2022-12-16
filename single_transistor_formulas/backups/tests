@@ -1,0 +1,94 @@
+""" Testing """
+
+"""CEA"""
+# # Set variables
+# variables = [
+#     40.1e3,     # rc
+#     1.7e3,      # re
+#     196,        # beta
+#     578e-6,     # ic
+#     10,         # va
+#     v_t         # vt
+# ]
+#
+# cea = CommonEmitterAmplifier(variables)
+#
+# # List of variables to print from class
+# print_list = [
+#     "max_av",
+#     "ri",
+#     "gm",
+#     "rpi",
+#     "Ro"
+# ]
+#
+# # Print in scientific format
+# for var in vars(cea):
+#     for x in print_list:
+#         if x == var:
+#             values = getattr(cea, var)
+#             print(var, " is  {:.2E}".format(values))
+
+
+"""CBA"""
+
+
+# # Set variables
+# variables = [
+#     35.4e3,     # rc
+#     2.3e3,      # re
+#     0.6e3,      # rb
+#     22,         # beta
+#     965e-6,     # ic
+#     v_t         # vt
+# ]
+#
+# cba = CommonBaseAmplifier(variables)
+#
+# # List of variables to print from class
+# print_list = [
+#     "max_av",
+#     "ri",
+#     "gm",
+#     "rpi",
+#     "Ro",
+#     "av"
+# ]
+#
+# # Print in scientific format
+# for var in vars(cba):
+#     for x in print_list:
+#         if x == var:
+#             values = getattr(cba, var)
+#             print(var, " is  {:.2E}".format(values))
+
+
+"""CCA"""
+# # Set variables
+# variables = [
+#     44.4e3,     # rc
+#     1.1e3,      # re
+#     0.3e3,      # rb
+#     22,         # beta
+#     965e-6,     # ic
+#     v_t         # vt
+# ]
+#
+# cca = CommonCollectorAmplifier(variables)
+#
+# # List of variables to print from class
+# print_list = [
+#     "max_av",
+#     "ri",
+#     "gm",
+#     "rpi",
+#     "Ro",
+#     "av"
+# ]
+#
+# # Print in scientific format
+# for var in vars(cca):
+#     for x in print_list:
+#         if x == var:
+#             values = getattr(cca, var)
+#             print(var, " is  {:.2E}".format(values))

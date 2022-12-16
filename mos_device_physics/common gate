@@ -1,0 +1,67 @@
+        if self.t_lambda == 0:
+            # Approaches infinity
+            self.ri = self.rig = 10E20
+
+            # Find von
+            self.von = math.sqrt(
+                (2 * self.id) / (self.k * self.wl)
+            )
+
+            # Find gm
+            self.gm = (
+                    (2 * self.id) / self.von
+            )
+
+            # Assume R0 = RD
+            self.Ro = self.rd
+            self.max_av = (self.rd / self.rs)
+        else:
+            # Find ro
+            self.ro = (
+                1 / (self.t_lambda * self.id)
+            )
+
+            # Find rd
+            self.rds = self.ro
+
+            # # Find device transconductance
+            # self.gm = math.sqrt(
+            #     (2 * self.id) / (self.k * self.wl)
+            # )
+
+            self.gm = math.sqrt(
+                (2 * self.k * self.wl * self.id)
+            )
+
+            # Find gds
+            self.gds = (1 / self.rds)
+
+            #
+            if self.two_phi_f == 0:
+                self.Ri = (
+                        (1 / (self.gm * self.gds)) * (1 + (self.rd / self.ro))
+                )
+
+                # Left side of parallel function
+                ro_p1 = (self.rs ** -1)
+                # Right side of parallel function
+                ro_p2 = (self.ro * (1 + self.rs * (self.gm + self.gds))) ** -1
+                self.Ro = (ro_p1 + ro_p2) ** -1
+            else:
+                self.gmb = (
+                    (self.gamma * self.gm) / (
+                        2 * math.sqrt(self.two_phi_f + self.v_sb)
+                    )
+                )
+
+                self.Ri = (
+                        (1 / (self.gm * self.gmb * self.gds)) * (1 + (self.rd / self.ro))
+                )
+
+
+        # Find av
+        self.av = (
+            (self.gm * self.rd) / (
+                (1 + self.gm * self.rs)
+            )
+        )
